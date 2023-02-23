@@ -1,0 +1,59 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "eslint-config-prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "no-unused-vars": "off",
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".scss"] }],
+    "react/react-in-jsx-scope": "off",
+    "no-console": "off", // console 사용하기
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "scss": "never"
+      }
+    ],
+    "no-param-reassign": ["error", { "props": false }],
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "import/no-cycle": "off",
+    "arrow-body-style": "off",
+    "prettier/prettier": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", "css", ".scss"]
+      },
+      "alias": {
+        "map": [
+          ["@styles", "./src/styles"],
+          ["@components", "./src/components"],
+          ["@assets", "./src/assets"],
+          ["@contexts", "./src/contexts"],
+          ["@hooks", "./src/hooks"],
+          ["@utils", "./src/utils"],
+          ["@types", "./src/@Types"]],
+        "extensions": [".js", ".jsx", "css", ".scss"]
+      }
+    }
+  }
+}
