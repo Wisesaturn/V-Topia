@@ -22,6 +22,40 @@
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".scss"] }],
     "react/react-in-jsx-scope": "off",
     "no-console": "off", // console 사용하기
+    "import/order": [
+      // import 정렬 및 구분
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["sibling", "parent", "index"],
+          "type",
+          "unknown"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "{react*,react*/**}",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "./**/index.jsx",
+            "group": "internal"
+          },
+          {
+            "pattern": "./**/style.jsx",
+            "group": "unknown"
+          },
+          {
+            "pattern": "./**/*.css",
+            "group": "unknown"
+          }
+        ],
+        "newlines-between": "always"
+      }
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -51,7 +85,8 @@
           ["@contexts", "./src/contexts"],
           ["@hooks", "./src/hooks"],
           ["@utils", "./src/utils"],
-          ["@types", "./src/@Types"]],
+          ["@types", "./src/@Types"]
+        ],
         "extensions": [".js", ".jsx", "css", ".scss"]
       }
     }
