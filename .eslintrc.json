@@ -10,17 +10,12 @@
     "eslint-config-prettier"
   ],
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
     "no-unused-vars": "off",
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".scss"] }],
-    "react/react-in-jsx-scope": "off",
     "no-console": "off", // console 사용하기
     "import/order": [
       // import 정렬 및 구분
@@ -36,16 +31,11 @@
         ],
         "pathGroups": [
           {
-            "pattern": "{react*,react*/**}",
-            "group": "external",
-            "position": "before"
-          },
-          {
-            "pattern": "./**/index.jsx",
+            "pattern": "./**/index.js",
             "group": "internal"
           },
           {
-            "pattern": "./**/style.jsx",
+            "pattern": "./**/style.js",
             "group": "unknown"
           },
           {
@@ -61,7 +51,6 @@
       "ignorePackages",
       {
         "js": "never",
-        "jsx": "never",
         "scss": "never"
       }
     ],
@@ -75,7 +64,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", "css", ".scss"]
+        "extensions": [".js", ".css", ".scss"]
       },
       "alias": {
         "map": [
@@ -83,11 +72,10 @@
           ["@components", "./src/components"],
           ["@assets", "./src/assets"],
           ["@contexts", "./src/contexts"],
-          ["@hooks", "./src/hooks"],
+          ["@routes", "./src/routes"],
           ["@utils", "./src/utils"],
-          ["@types", "./src/@Types"]
         ],
-        "extensions": [".js", ".jsx", "css", ".scss"]
+        "extensions": [".js", ".css", ".scss"]
       }
     }
   }
