@@ -1,7 +1,6 @@
+import MainPage from '@pages/main';
 
-import MainPage from "@pages/main";
-
-export class App {
+class App {
   constructor($container) {
     this.$container = $container;
 

@@ -1,3 +1,4 @@
+import './style.css';
 
 class MainPage {
   constructor($container) {
@@ -9,10 +10,10 @@ class MainPage {
 
     this.render = () => {
       this.$container.innerHTML = `
-      <main class="mainPage">
-        메인페이지 입니다
-      </main>
-    `;
+        <main class="mainWrapper">
+          메인페이지 입니다
+        </main>
+      `;
     };
 
     this.render();

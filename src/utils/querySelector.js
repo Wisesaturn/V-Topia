@@ -6,4 +6,4 @@ export const $ = (selector) => {
   if (!(result instanceof HTMLElement)) return null;
 
   return result;
-}
+};

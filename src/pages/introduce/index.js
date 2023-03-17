@@ -1,4 +1,3 @@
-
 class IntroducePage {
   constructor($container) {
     this.$container = $container;

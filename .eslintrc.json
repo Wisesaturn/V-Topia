@@ -1,7 +1,7 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "esnext": true
   },
   "extends": [
     "airbnb-base",
@@ -15,32 +15,21 @@
   },
   "plugins": ["prettier"],
   "rules": {
+    "no-new": "off",
     "no-unused-vars": "off",
-    "no-console": "off", // console 사용하기
+    "no-console": "off",
     "import/order": [
-      // import 정렬 및 구분
       "error",
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          ["sibling", "parent", "index"],
-          "type",
-          "unknown"
-        ],
+        "groups": ["builtin", "external", "internal", ["sibling", "parent", "index"], "unknown"],
         "pathGroups": [
           {
             "pattern": "./**/index.js",
-            "group": "internal"
+            "group": "external"
           },
           {
-            "pattern": "./**/style.js",
-            "group": "unknown"
-          },
-          {
-            "pattern": "./**/*.css",
-            "group": "unknown"
+            "pattern": "./**/style.css",
+            "group": "builtin"
           }
         ],
         "newlines-between": "always"
@@ -50,8 +39,7 @@
       "error",
       "ignorePackages",
       {
-        "js": "never",
-        "scss": "never"
+        "js": "never"
       }
     ],
     "no-param-reassign": ["error", { "props": false }],
@@ -64,18 +52,18 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".css", ".scss"]
+        "extensions": [".js"]
       },
       "alias": {
         "map": [
           ["@styles", "./src/styles"],
+          ["@pages", "./src/pages"],
           ["@components", "./src/components"],
           ["@assets", "./src/assets"],
-          ["@contexts", "./src/contexts"],
           ["@routes", "./src/routes"],
-          ["@utils", "./src/utils"],
+          ["@utils", "./src/utils"]
         ],
-        "extensions": [".js", ".css", ".scss"]
+        "extensions": [".js"]
       }
     }
   }
