@@ -3,9 +3,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  esbuild: {
-    
-  },
+  esbuild: {},
   resolve: {
     alias: {
       '@components': path.resolve(__dirname, './src/components'),
