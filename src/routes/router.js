@@ -10,7 +10,7 @@ class Router {
         return route.path === currentPath;
       });
 
-      return findData.page;
+      return findData?.page;
     };
 
     const routing = () => {
@@ -19,6 +19,7 @@ class Router {
       currentPage = new TargetPage($container);
     };
 
+    // popstate : 브라우저 뒤로가기/앞으로가기 버튼 누를 때 체크
     window.addEventListener('popstate', () => {
       routing();
     });
