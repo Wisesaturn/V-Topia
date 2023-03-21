@@ -1,9 +1,9 @@
-import main from '@pages/main';
-import introduce from '@pages/introduce';
-import artist from '@pages/artist';
+import MainPage from '@pages/main';
+import IntroducePage from '@pages/introduce';
+import ArtistPage from '@pages/artist';
 
-export const routes = {
-  '/': { title: 'V-topia', render: main },
-  '/introduce': { title: 'V-topia : introduce', render: introduce },
-  '/artist': { title: 'V-topia : artist', render: artist },
-};
+export const routes = [
+  { path: '/', title: 'V-topia', page: MainPage },
+  { path: '/introduce', title: 'V-topia : introduce', page: IntroducePage },
+  { path: '/artist', title: 'V-topia : artist', page: ArtistPage },
+];
