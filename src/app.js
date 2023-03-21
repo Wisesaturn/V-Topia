@@ -2,6 +2,8 @@ import Router from '@routes/router';
 
 import { $ } from './utils/querySelector';
 
+const LOCAL_URL = 'http://localhost:5173/';
+
 class App {
   constructor($container) {
     this.$container = $container;
@@ -11,7 +13,9 @@ class App {
       if (!(target instanceof HTMLAnchorElement)) return;
 
       e.preventDefault();
-      history.pushState('', '', target);
+      if (String(target).replace(LOCAL_URL, '/') === location.pathname)
+        history.replaceState('', '', target);
+      else history.pushState('', '', target);
 
       dispatchEvent(new Event('popstate'));
     });
