@@ -1,3 +1,5 @@
+import ErrorPage from '@pages/error';
+
 import { routes } from './path';
 
 class Router {
@@ -15,11 +17,10 @@ class Router {
 
     const routing = () => {
       currentPage = null;
-      const TargetPage = findMatchedPath(location.pathname) || '404';
+      const TargetPage = findMatchedPath(location.pathname) || ErrorPage;
       currentPage = new TargetPage($container);
     };
 
-    // popstate : 브라우저 뒤로가기/앞으로가기 버튼 누를 때 체크
     window.addEventListener('popstate', () => {
       routing();
     });

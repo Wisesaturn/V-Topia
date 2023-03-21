@@ -1,4 +1,4 @@
-class ErrornPage {
+class ErrorPage {
   constructor($container) {
     this.$container = $container;
 
