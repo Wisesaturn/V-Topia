@@ -17,7 +17,7 @@ jobs:
         cache: npm
 
     - name: Npm install
-      run: npm install jest --quiet
+      run: npm i jest --quiet
       shell: bash
 
     - name: Testing By Jest
