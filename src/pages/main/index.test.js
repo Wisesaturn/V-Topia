@@ -18,23 +18,15 @@ describe('Main Page Test', () => {
     expect(main).toBeTruthy();
   });
 
-  it('should render artist section', () => {
+  it('should render every single section', () => {
     const artist = $container.querySelector('.artistSection');
-    expect(artist).toBeTruthy();
-  });
-
-  it('should render archive section', () => {
     const archive = $container.querySelector('.archiveSection');
-    expect(archive).toBeTruthy();
-  });
-
-  it('should render video section', () => {
     const video = $container.querySelector('.videoSection');
-    expect(video).toBeTruthy();
-  });
-
-  it('should render JooA section', () => {
     const jooa = $container.querySelector('.JooASection');
+
+    expect(artist).toBeTruthy();
+    expect(archive).toBeTruthy();
+    expect(video).toBeTruthy();
     expect(jooa).toBeTruthy();
   });
 

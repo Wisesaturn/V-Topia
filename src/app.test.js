@@ -8,6 +8,10 @@ describe('HTML Test', () => {
     document.documentElement.innerHTML = html;
   });
 
+  it('should have <div id="app">', () => {
+    expect(document.querySelector('#app')).toBeTruthy();
+  });
+
   it('should have a title', () => {
     expect(window.document.title).toBe('V-Topia');
   });
