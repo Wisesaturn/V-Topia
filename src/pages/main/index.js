@@ -9,7 +9,11 @@ class MainPage {
     };
 
     this.render = () => {
-      this.$container.innerHTML = `
+      this.$container.innerHTML = this.contentHTML();
+    };
+
+    this.contentHTML = () => {
+      return `
         <main class="mainWrapper">
           <section class="artistSection">
             <div class="image">Image</div>

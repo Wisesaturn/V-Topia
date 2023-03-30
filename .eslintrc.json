@@ -17,6 +17,8 @@
   "rules": {
     "prefer-const": "off",
     "no-restricted-globals": "off",
+    "no-plusplus": "off",
+    "no-undef": "off",
     "no-new": "off",
     "no-unused-vars": "off",
     "no-console": "off",
@@ -63,7 +65,8 @@
           ["@components", "./src/components"],
           ["@assets", "./src/assets"],
           ["@routes", "./src/routes"],
-          ["@utils", "./src/utils"]
+          ["@utils", "./src/utils"],
+          ["@mock", "./src/mock"]
         ],
         "extensions": [".js"]
       }
