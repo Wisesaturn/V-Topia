@@ -1,4 +1,6 @@
 // for jest
 module.exports = {
-  presets: [['@babel/preset-env', { useBuiltIns: 'entry', targets: { node: 'current' } }]],
+  presets: [
+    ['@babel/preset-env', { useBuiltIns: 'usage', corejs: '2', targets: { node: 'current' } }],
+  ],
 };
