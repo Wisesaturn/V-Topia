@@ -5,6 +5,7 @@ import { routes } from './path';
 class Router {
   constructor($container) {
     this.$container = $container;
+    let currentPage;
 
     const findMatchedPath = (currentPath) => {
       const findData = routes.find((route) => {
@@ -15,8 +16,9 @@ class Router {
     };
 
     const routing = () => {
+      currentPage = '';
       const TargetPage = findMatchedPath(location.pathname) || ErrorPage;
-      new TargetPage($container);
+      currentPage = new TargetPage($container);
     };
 
     window.addEventListener('popstate', () => {
