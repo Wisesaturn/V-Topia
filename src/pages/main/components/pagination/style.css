@@ -1,9 +1,23 @@
 #pagination {
   position : absolute;
-  top : 0;
-  left : 0;
+  top : 50%;
+  right : 1.5%;
+  transform: translate(-50%, -50%);
+
+  display : flex;
+  gap : 1rem;
+  flex-direction: column;
+}
+
+#pagination .section {
+  background-color : grey;
+  opacity : .25;
+  padding : .25rem;
+  border-radius : 10px;
 }
 
 #pagination .selected {
-  color : white;
+  background-color : white;
+  opacity : .5;
 }
+

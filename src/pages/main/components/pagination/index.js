@@ -1,25 +1,30 @@
 import './style.css';
+
 import { $ } from '@utils/querySelector';
 
 class Pagination {
-  constructor(number) {
-    this.number = number;
-    const pagination = $('#pagination');
-
-    this.setState = (num) => {
-      this.number = num;
-    };
+  constructor($container) {
+    this.$container = $container;
+    this.cur = 1;
+    this.total = 5;
 
     this.render = () => {
-      pagination.innerHTML = this.contentHTML();
+      this.$container.innerHTML = this.contentHTML();
+      this.bindEvents();
     };
+
+    this.unmount = () => {
+      this.$container.innerHTML = '';
+    };
+
+    this.bindEvents = () => {};
 
     this.contentHTML = () => {
       return `
-        <div class="selected">아아</div>
-        <div class="selected">아아</div>
-        <div class="selected">아아</div>
-        <div class="selected">아아</div>
+        <div class="section selected"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
       `;
     };
 

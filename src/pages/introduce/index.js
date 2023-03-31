@@ -7,7 +7,7 @@ class IntroducePage {
     };
 
     this.unmount = () => {
-      this.$container = '';
+      this.$container.innerHTML = '';
     };
 
     this.render = () => {

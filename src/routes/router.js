@@ -16,7 +16,7 @@ class Router {
     };
 
     const routing = () => {
-      currentPage.unmount();
+      if (currentPage) currentPage.unmount();
       const TargetPage = findMatchedPath(location.pathname) || ErrorPage;
       currentPage = new TargetPage($container);
     };

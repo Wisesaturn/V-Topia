@@ -1,4 +1,6 @@
 import './style.css';
+import { $ } from '@utils/querySelector';
+
 import Pagination from './components/pagination';
 
 class MainPage {
@@ -12,12 +14,12 @@ class MainPage {
 
     this.render = () => {
       this.$container.innerHTML = this.contentHTML();
-      this.pagination = new Pagination();
+      if (document.getElementById('pagination')) this.pagination = new Pagination($('#pagination'));
     };
 
     this.unmount = () => {
-      this.$container = '';
-      this.pagination = '';
+      this.$container.innerHTML = '';
+      this.pagination.unmount();
     };
 
     this.contentHTML = () => {

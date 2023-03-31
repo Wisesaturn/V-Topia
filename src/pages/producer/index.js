@@ -7,7 +7,7 @@ class ProducerPage {
     };
 
     this.unmount = () => {
-      this.$container = '';
+      this.$container.innerHTML = '';
     };
 
     this.render = () => {
