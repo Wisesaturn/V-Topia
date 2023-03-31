@@ -1,8 +1,10 @@
 import './style.css';
+import Pagination from './components/pagination';
 
 class MainPage {
   constructor($container) {
     this.$container = $container;
+    this.pagination = '';
 
     this.setState = () => {
       this.render();
@@ -10,6 +12,12 @@ class MainPage {
 
     this.render = () => {
       this.$container.innerHTML = this.contentHTML();
+      this.pagination = new Pagination();
+    };
+
+    this.unmount = () => {
+      this.$container = '';
+      this.pagination = '';
     };
 
     this.contentHTML = () => {

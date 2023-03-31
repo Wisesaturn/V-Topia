@@ -2,9 +2,7 @@ class Sitemap {
   constructor($container) {
     this.$container = $container;
 
-    this.setState = () => {
-      this.render();
-    };
+    this.setState = () => {};
 
     this.render = () => {
       this.$container.innerHTML = this.contentHTML();
@@ -12,9 +10,7 @@ class Sitemap {
 
     this.contentHTML = () => {
       return `
-        <div id="menu">
-          메뉴
-        </div>
+        내용
       `;
     };
 

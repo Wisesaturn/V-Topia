@@ -6,6 +6,10 @@ class ArtistPage {
       this.render();
     };
 
+    this.unmount = () => {
+      this.$container = '';
+    };
+
     this.render = () => {
       this.$container.innerHTML = `
       <main class="artistPage">
