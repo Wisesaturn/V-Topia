@@ -13,11 +13,13 @@ class MainPage {
     };
 
     this.render = () => {
+      document.body.style.setProperty('overflow', 'hidden');
       this.$container.innerHTML = this.contentHTML();
       if (document.getElementById('pagination')) this.pagination = new Pagination($('#pagination'));
     };
 
     this.unmount = () => {
+      document.body.style.setProperty('overflow-y', 'scroll');
       this.$container.innerHTML = '';
       this.pagination.unmount();
     };

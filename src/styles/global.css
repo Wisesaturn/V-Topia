@@ -6,8 +6,6 @@ body {
   color : white;
   background-color : black;
   min-width : 768px;
-
-  overflow : hidden;
 }
 
 a {
@@ -52,4 +50,8 @@ footer {
   color : #999;
   font-size: 1.2rem;
   padding : 4rem 0;
+}
+
+::-webkit-scrollbar {
+  display : none;
 }
