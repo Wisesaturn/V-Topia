@@ -30,13 +30,27 @@ section {
   gap : 1rem;
 }
 
-.archiveSection > .title {
+.archiveSection > .archiveTitle {
+  width : min-content;
+  display : block;
+  position : relative;
   color : black;
   font-size : 4rem;
-  overflow : hidden;
   white-space : nowrap;
+  text-align : right;
 
   margin : 2rem 0;
+  animation: left-scroll 20s linear infinite;
+}
+
+.archiveSection > .archiveTitle::after {
+  position : absolute;
+  top : 0;
+  left : 100%;
+  white-space : nowrap;
+  content : attr(data-content);
+  padding-left : 2rem;
+  text-align : left;
 }
 
 .archiveSection > .subtitle {
@@ -57,21 +71,58 @@ section {
 }
 
 .archiveSection > .archivesWrapper > .archives > .album {
-  background-color: gray;
-  width : 100%;
-  max-width : 20rem;
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor : pointer;
 
+  background-color : grey;
   border-radius : 2rem;
   text-align : center;
-  padding : 10rem 3rem;
+}
+
+.archiveSection > .archivesWrapper > .archives > .album.flip {
+  transform: rotateY(180deg);
+}
+
+.archiveSection > .archivesWrapper > .archives > .album > .front,
+.archiveSection > .archivesWrapper > .archives > .album > .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+  display : flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.archiveSection > .archivesWrapper > .archives > .album > .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.archiveSection > .archivesWrapper > .archives > .album > .back {
+  transform: rotateY(180deg);
 }
 
 /* video */
 .videoSection {
   flex-direction : column;
+  position: relative;
+  height: 100vh;
+  background-color: black;
+  color: white;
 
   align-items: center;
   justify-content: center;
+  overflow : hidden;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .videoSection > .title {
@@ -86,6 +137,52 @@ section {
 
 .videoSection > .title > h1 {
   font-size : 3rem;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  background-color : grey;
+  transition : 0.5s ease-in-out;
+}
+
+.titleUp {
+  top: 24.75%;
+  
+}
+
+.titleDown {
+  top: 75.75%;
+}
+
+.title h1 {
+  font-size: 3em;
+}
+
+.videoPlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  z-index : 2;
+
+  transition : 0.5s ease-in-out;
+
+}
+
+.videoPlay.clicked {
+  width: 0rem;
+  height: 0rem;
+  opacity: 0;
+  cursor : default;
 }
 
 /* jooa */
@@ -107,4 +204,14 @@ section {
 
   background-color : #ddd;
   padding : 20rem 35rem;
+}
+
+/* animation */
+@keyframes left-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-104%);
+  }
 }
