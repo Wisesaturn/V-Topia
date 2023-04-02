@@ -30,16 +30,8 @@ section {
   gap : 1rem;
 }
 
-.archiveSection > .archiveTitle::before {
-  position : absolute;
-  top : 0;
-  left : -100%;
-  content : attr(data-content);
-  padding-right : 2rem;
-  text-align : left;
-}
-
 .archiveSection > .archiveTitle {
+  width : min-content;
   display : block;
   position : relative;
   color : black;
@@ -119,9 +111,18 @@ section {
 /* video */
 .videoSection {
   flex-direction : column;
+  position: relative;
+  height: 100vh;
+  background-color: black;
+  color: white;
 
   align-items: center;
   justify-content: center;
+  overflow : hidden;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .videoSection > .title {
@@ -136,6 +137,52 @@ section {
 
 .videoSection > .title > h1 {
   font-size : 3rem;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  background-color : grey;
+  transition : 0.5s ease-in-out;
+}
+
+.titleUp {
+  top: 24.75%;
+  
+}
+
+.titleDown {
+  top: 75.75%;
+}
+
+.title h1 {
+  font-size: 3em;
+}
+
+.videoPlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  z-index : 2;
+
+  transition : 0.5s ease-in-out;
+
+}
+
+.videoPlay.clicked {
+  width: 0rem;
+  height: 0rem;
+  opacity: 0;
+  cursor : default;
 }
 
 /* jooa */
@@ -162,9 +209,9 @@ section {
 /* animation */
 @keyframes left-scroll {
   0% {
-    transform: translateX(10%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-61%);
+    transform: translateX(-104%);
   }
 }
