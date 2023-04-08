@@ -3,16 +3,26 @@ import './style.css';
 class Pagination {
   constructor($container) {
     this.$container = $container;
-    this.lastScrollTop = 0;
+    this.isScrollTop = 0;
     this.currentSection = 1;
     this.totalSection = 5;
 
-    this.render = () => {
-      this.$container.innerHTML = this.contentHTML();
+    const scrollEvent = () => {
+      const currentScrollTop = window.scrollY;
+      const scrollDirection = currentScrollTop > this.isScrollTop ? 'down' : 'up';
+      this.isScrollTop = currentScrollTop;
+
+      if (scrollDirection === 'down') {
+        if (this.currentSection === 5) return;
+        this.currentSection++;
+      } else if (scrollDirection === 'up') {
+        if (this.currentSection === 1) return;
+        this.currentSection--;
+      }
     };
 
-    this.unmount = () => {
-      this.$container.innerHTML = '';
+    this.render = () => {
+      this.$container.innerHTML = this.contentHTML();
     };
 
     this.contentHTML = () => {
@@ -24,20 +34,12 @@ class Pagination {
       `;
     };
 
-    window.addEventListener('scroll', () => {
-      const currentScrollTop = window.scrollY;
-      const scrollDirection = currentScrollTop > lastScrollTop ? 'down' : 'up';
-      this.lastScrollTop = currentScrollTop;
+    this.unmount = () => {
+      this.$container.innerHTML = '';
+      window.removeEventListener('scroll', scrollEvent);
+    };
 
-      if (scrollDirection === 'down') {
-        if (this.currentSection < 5) {
-          this.currentSection++;
-        } else if (this.currentSection > 1) {
-          this.currentSection--;
-        }
-      }
-    });
-
+    window.addEventListener('scroll', scrollEvent);
     this.render();
   }
 }

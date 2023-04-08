@@ -1,21 +1,31 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest/globals": true
   },
   "extends": [
     "airbnb-base",
     "plugin:import/errors",
     "plugin:import/warnings",
+    "plugin:jest/recommended",
     "eslint-config-prettier"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["prettier"],
+  "overrides": [
+    {
+      "files": ["**/*.test.js"],
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/recommended"]
+    }
+  ],
+  "plugins": ["prettier", "jest"],
   "rules": {
     "prefer-const": "off",
+    "no-promise-executor-return": "off",
     "no-restricted-globals": "off",
     "no-plusplus": "off",
     "no-undef": "off",

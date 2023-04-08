@@ -30,9 +30,22 @@ describe('Main Page Test', () => {
     expect(jooa).toBeTruthy();
   });
 
-  test('should update the rendered HTML content when setState() is called', () => {
+  it('should update the rendered HTML content when setState() is called', () => {
     mainPage.setState();
     const expectedHTML = mainPage.contentHTML();
     expect($container.innerHTML).toBe(expectedHTML);
   });
+
+  // it('should handle click event on videoPlay button', () => {
+  //   const videoPlay = $container.querySelector('.videoPlay');
+  //   const titleUp = $container.querySelector('.titleUp');
+  //   const titleDown = $container.querySelector('.titleDown');
+
+  //   videoPlay.click();
+
+  //   expect(titleUp.style.top).toBe('-20%');
+  //   expect(titleUp.style.opacity).toBe('0');
+  //   expect(titleDown.style.top).toBe('120%');
+  //   expect(titleDown.style.opacity).toBe('0');
+  // });
 });

@@ -5,6 +5,8 @@ import Pagination from './components/pagination';
 
 class MainPage {
   constructor($container) {
+    if (!$container) throw new Error('container is required');
+
     this.$container = $container;
     this.pagination = '';
 
@@ -13,17 +15,11 @@ class MainPage {
     };
 
     this.render = () => {
-      document.body.style.setProperty('overflow', 'hidden');
+      // document.body.style.setProperty('overflow', 'hidden');
       this.$container.innerHTML = this.contentHTML();
-      this.useflip();
+      this.useAlbumFlip();
       this.useVideoPlay();
       if (document.getElementById('pagination')) this.pagination = new Pagination($('#pagination'));
-    };
-
-    this.unmount = () => {
-      document.body.style.setProperty('overflow-y', 'scroll');
-      this.$container.innerHTML = '';
-      this.pagination.unmount();
     };
 
     this.contentHTML = () => {
@@ -80,23 +76,18 @@ class MainPage {
       `;
     };
 
-    this.useflip = () => {
+    this.useAlbumFlip = () => {
       const albums = document.querySelectorAll('.album');
 
       albums.forEach((album) => {
-        album.addEventListener('click', () => {
+        const albumEvent = () => {
           album.classList.toggle('flip');
-        });
-      });
-    };
+        };
 
-    this.unUseflip = () => {
-      const albums = document.querySelectorAll('.album');
+        if (album.classList.contains('flipOn')) return;
+        album.classList.add('flipOn');
 
-      albums.forEach((album) => {
-        album.removeEventListener('click', () => {
-          album.classList.toggle('flip');
-        });
+        album.addEventListener('click', albumEvent);
       });
     };
 
@@ -104,8 +95,9 @@ class MainPage {
       const videoPlay = $('.videoPlay');
       const titleUp = $('.titleUp');
       const titleDown = $('.titleDown');
+      if (!($('.videoSection') instanceof HTMLElement)) return;
 
-      videoPlay.addEventListener('click', () => {
+      const videoPlayEvent = () => {
         if (videoPlay.classList.contains('clicked')) return;
         titleUp.style.top = '-20%';
         titleUp.style.opacity = '0';
@@ -114,11 +106,16 @@ class MainPage {
         titleDown.style.opacity = '0';
 
         videoPlay.classList.add('clicked');
-      });
+        videoPlay.removeEventListener('click', videoPlayEvent);
+      };
+
+      videoPlay.addEventListener('click', videoPlayEvent);
     };
 
     this.unmount = () => {
-      $('.videoPlay').removeEventListener('click', this.useVideoPlay());
+      document.body.style.setProperty('overflow-y', 'scroll');
+      this.$container.innerHTML = '';
+      if (this.pagination) this.pagination.unmount();
     };
 
     this.render();
