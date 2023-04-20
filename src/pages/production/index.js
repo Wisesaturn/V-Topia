@@ -6,6 +6,10 @@ class ProductionPage {
       this.render();
     };
 
+    this.unmount = () => {
+      this.$container.innerHTML = '';
+    };
+
     this.render = () => {
       this.$container.innerHTML = `
       <main class="productionPage">

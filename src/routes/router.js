@@ -5,7 +5,7 @@ import { routes } from './path';
 class Router {
   constructor($container) {
     this.$container = $container;
-    let currentPage;
+    let currentPage = '';
 
     const findMatchedPath = (currentPath) => {
       const findData = routes.find((route) => {
@@ -16,7 +16,7 @@ class Router {
     };
 
     const routing = () => {
-      currentPage = '';
+      if (currentPage) currentPage.unmount();
       const TargetPage = findMatchedPath(location.pathname) || ErrorPage;
       currentPage = new TargetPage($container);
     };

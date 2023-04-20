@@ -3,18 +3,22 @@ body {
   padding : 0;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
-  color : #1c1c1c;
+  color : white;
+  background-color : black;
   min-width : 768px;
-
-  overflow-x : hidden;
 }
 
 a {
   text-decoration: none;
-  color : #1c1c1c;
+  color : white;
 }
 
 header {
+  position : absolute;
+  top : 0;
+  left : 0;
+  z-index : 1000;
+
   display : flex;
   width : calc(100vw - 4rem);
   height : 7.5rem;
@@ -47,4 +51,8 @@ footer {
   color : #999;
   font-size: 1.2rem;
   padding : 4rem 0;
+}
+
+::-webkit-scrollbar {
+  display : none;
 }
