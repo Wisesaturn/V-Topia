@@ -109,6 +109,11 @@ section {
 }
 
 /* video */
+.videoSource > video {
+  height : 100vh;
+  width : 100vw;
+}
+
 .videoSection {
   flex-direction : column;
   position: relative;
@@ -145,7 +150,7 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.5;
-  background-color : grey;
+  background-color : black;
   transition : 0.5s ease-in-out;
 }
 
@@ -167,14 +172,33 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 8rem;
-  height: 8rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   background-color: white;
   cursor: pointer;
   z-index : 2;
 
   transition : 0.5s ease-in-out;
+
+  display : flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-box-shadow: 0 3px 9.5px 3px #aaaaaa;
+  -moz-box-shadow: 0 3px 9.5px 3px #aaaaaa;
+  box-shadow: 0 3px 9.5px 3px #aaaaaa;
+}
+
+.videoPlay > .playbtn {
+  color : black;
+  font-size : 3rem;
+
+  transition : 0.5s ease-in-out;
+}
+
+.playbtn.clicked {
+  font-size : 0rem;
 }
 
 .videoPlay.clicked {

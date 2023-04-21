@@ -12,7 +12,7 @@ class MainPage {
     };
 
     this.render = () => {
-      // document.body.style.setProperty('overflow', 'hidden');
+      $('footer').innerHTML = '';
       this.$container.innerHTML = this.contentHTML();
       this.useAlbumFlip();
       this.useVideoPlay();
@@ -63,9 +63,16 @@ class MainPage {
                 <div class="title titleUp">
                   <h1>VIVIAN TITLE</h1>
                 </div>
-                <div class="videoPlay"></div>
+                <div class="videoPlay">
+                 <div class="material-icons playbtn">play_arrow</div>
+                </div>
                 <div class="title titleDown">
                   <h1>PLAY ON CLICK</h1>
+                </div>
+                <div class="videoSource">
+                  <video playsinline="" muted="" loop="" autoplay preload="metadata" data-desktop-url="https://smtown-cdn.smtown.com/upload/smtown/main/video/13881e131eb1407382e6599e13c8fd4b_2023-04-14-09-24-01.mp4" data-mobile-url="https://smtown-cdn.smtown.com/upload/smtown/main/video/094ac37e480d44b6aa4a81cebdf33e8c_2023-04-14-09-27-36.mp4">
+                    <source src="https://smtown-cdn.smtown.com/upload/smtown/main/video/13881e131eb1407382e6599e13c8fd4b_2023-04-14-09-24-01.mp4" type="video/mp4">
+                  </video>
                 </div>
               </section>
             </swiper-slide>
@@ -99,6 +106,7 @@ class MainPage {
 
     this.useVideoPlay = () => {
       const videoPlay = $('.videoPlay');
+      const playBtn = $('.playbtn');
       const titleUp = $('.titleUp');
       const titleDown = $('.titleDown');
       if (!($('.videoSection') instanceof HTMLElement)) return;
@@ -112,6 +120,7 @@ class MainPage {
         titleDown.style.opacity = '0';
 
         videoPlay.classList.add('clicked');
+        playBtn.classList.add('clicked');
         videoPlay.removeEventListener('click', videoPlayEvent);
       };
 
@@ -121,6 +130,7 @@ class MainPage {
     this.unmount = () => {
       document.body.style.setProperty('overflow-y', 'scroll');
       this.$container.innerHTML = '';
+      $('footer').innerHTML = '© V-Topia';
     };
 
     this.render();
