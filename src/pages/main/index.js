@@ -1,6 +1,9 @@
 import './style.css';
 import { $ } from '@utils/querySelector';
 
+import VideoSection from './videoSection';
+import ArtistSection from './artistSection';
+
 class MainPage {
   constructor($container) {
     if (!$container) throw new Error('container is required');
@@ -14,6 +17,9 @@ class MainPage {
     this.render = () => {
       $('footer').innerHTML = '';
       this.$container.innerHTML = this.contentHTML();
+      new VideoSection($('.videoSection'));
+      new ArtistSection($('.artistSection'));
+
       this.useAlbumFlip();
       this.useVideoPlay();
     };
@@ -23,9 +29,7 @@ class MainPage {
         <main class="mainWrapper">
           <swiper-container direction="vertical" pagination="true" pagination-clickable="true" space-between="30" mousewheel="true">
             <swiper-slide>
-            <section class="artistSection">
-              <div class="image">Image</div>
-              <div class="image">Image</div>
+              <section class="artistSection">
               </section>
             </swiper-slide>
             <swiper-slide>
@@ -60,20 +64,6 @@ class MainPage {
             </swiper-slide>
             <swiper-slide>
               <section class="videoSection">
-                <div class="title titleUp">
-                  <h1>VIVIAN TITLE</h1>
-                </div>
-                <div class="videoPlay">
-                 <div class="material-icons playbtn">play_arrow</div>
-                </div>
-                <div class="title titleDown">
-                  <h1>PLAY ON CLICK</h1>
-                </div>
-                <div class="videoSource">
-                  <video playsinline="" muted="" loop="" autoplay preload="metadata" data-desktop-url="https://smtown-cdn.smtown.com/upload/smtown/main/video/13881e131eb1407382e6599e13c8fd4b_2023-04-14-09-24-01.mp4" data-mobile-url="https://smtown-cdn.smtown.com/upload/smtown/main/video/094ac37e480d44b6aa4a81cebdf33e8c_2023-04-14-09-27-36.mp4">
-                    <source src="https://smtown-cdn.smtown.com/upload/smtown/main/video/13881e131eb1407382e6599e13c8fd4b_2023-04-14-09-24-01.mp4" type="video/mp4">
-                  </video>
-                </div>
               </section>
             </swiper-slide>
             <swiper-slide>

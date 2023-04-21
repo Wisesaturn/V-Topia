@@ -1,3 +1,10 @@
+:root {
+  /* swiper */
+  --swiper-theme-color : white !important;
+  --swiper-pagination-bullet-inactive-color : #999 !important;
+  --swiper-pagination-bullet-vertical-gap : 1rem;
+}
+
 body {
   margin : 0;
   padding : 0;
