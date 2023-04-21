@@ -30,6 +30,37 @@ section {
   object-fit : contain;
 }
 
+.artistSection > .snsContainer {
+  position : absolute;
+  top : 10rem;
+  left : 2rem;
+
+  display : flex;
+  justify-content: center;
+
+  gap : .75rem;
+  flex-direction: column;
+}
+
+.artistSection > .snsContainer > a > .snsBtn {
+  background-color: white;
+  color: black;
+
+  width : 3rem;
+  height : 3rem;
+  border-radius : 9999px;
+
+  transition : 0.5s ease-in-out;
+
+  display : flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-box-shadow: 0 1px 9.5px 1px #aaaaaa;
+  -moz-box-shadow: 0 1px 9.5px 1px #aaaaaa;
+  box-shadow: 0 1px 9.5px 1px #aaaaaa;
+}
+
 /* archive */
 .archiveSection {
   flex-direction : column;
