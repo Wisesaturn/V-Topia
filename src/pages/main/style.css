@@ -1,7 +1,6 @@
 /* common */
 .mainWrapper {
-  background: #999;
-  color: black;
+  background: black;
 }
 
 section {
@@ -73,7 +72,6 @@ section {
   width : min-content;
   display : block;
   position : relative;
-  color : black;
   font-size : 4rem;
   white-space : nowrap;
   text-align : right;

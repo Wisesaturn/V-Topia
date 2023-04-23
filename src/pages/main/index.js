@@ -3,6 +3,7 @@ import { $ } from '@utils/querySelector';
 
 import VideoSection from './videoSection';
 import ArtistSection from './artistSection';
+import ArchiveSection from './archiveSection';
 
 class MainPage {
   constructor($container) {
@@ -19,6 +20,7 @@ class MainPage {
       this.$container.innerHTML = this.contentHTML();
       new VideoSection($('.videoSection'));
       new ArtistSection($('.artistSection'));
+      new ArchiveSection($('.archiveSection'));
 
       this.useAlbumFlip();
       this.useVideoPlay();
@@ -34,32 +36,6 @@ class MainPage {
             </swiper-slide>
             <swiper-slide>
               <section class="archiveSection">
-                <div class="archiveTitle" data-content="V-TOPIA ’s VIRTUAL ARTIST VIVIAN V-TOPIA ’s VIRTUAL ARTIST VIVIAN">
-                  V-TOPIA ’s VIRTUAL ARTIST VIVIAN
-                </div>
-                <div class="subtitle">
-                  Archives
-                </div>
-                <div class="archivesWrapper">
-                  <div class="archives">
-                    <div class="album">
-                      <div class="front">
-                        앞면 내용
-                      </div>
-                      <div class="back">
-                        뒷면 내용
-                      </div>
-                    </div>
-                    <div class="album">
-                      <div class="front">
-                        앞면 내용
-                      </div>
-                      <div class="back">
-                        뒷면 내용
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </section>
             </swiper-slide>
             <swiper-slide>
@@ -75,6 +51,7 @@ class MainPage {
               </section>
             </swiper-slide>
           </swiper-container>
+          <div class="scrollTopBtnContainer"></div>
         </main>
       `;
     };
