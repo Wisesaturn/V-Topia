@@ -5,6 +5,10 @@
   --swiper-pagination-bullet-vertical-gap : 1rem;
 }
 
+.isButton {
+  cursor : pointer;
+}
+
 body {
   margin : 0;
   padding : 0;

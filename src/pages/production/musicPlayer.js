@@ -10,10 +10,46 @@ class MusicPlayer {
 
     this.contentHTML = () => {
       return `
-        <div class="musicPlayer" id="1">1</div>
-        <div class="musicPlayer" id="2">2</div>
-        <div class="musicPlayer" id="3">3</div>
-        <div class="musicPlayer" id="4">4</div>
+        <div class="musicPlayerWrapper" id="1">
+          <div class="musicPlayerContainer" id="1">
+            <div class="thumbnail">thumbnail</div>
+            <div class="explain">explain</div>
+          </div>
+          <div class="playerline material-icons">
+            <span class="isButton">play_arrow</span>
+            <div class="playerlineGauge"></div>  
+          </div>
+        </div>
+         <div class="musicPlayerWrapper" id="2">
+          <div class="musicPlayerContainer" id="2">
+            <div class="thumbnail">thumbnail</div>
+            <div class="explain">explain</div>
+          </div>
+          <div class="playerline material-icons">
+            <span class="isButton">play_arrow</span>
+            <div class="playerlineGauge"></div>  
+          </div>
+        </div>
+         <div class="musicPlayerWrapper" id="3">
+          <div class="musicPlayerContainer" id="3">
+            <div class="thumbnail">thumbnail</div>
+            <div class="explain">explain</div>
+          </div>
+          <div class="playerline material-icons">
+            <span class="isButton">play_arrow</span>
+            <div class="playerlineGauge"></div>  
+          </div>
+        </div>
+         <div class="musicPlayerWrapper" id="4">
+          <div class="musicPlayerContainer" id="4">
+            <div class="thumbnail">thumbnail</div>
+            <div class="explain">explain</div>
+          </div>
+          <div class="playerline material-icons">
+            <span class="isButton">play_arrow</span>
+            <div class="playerlineGauge"></div>  
+          </div>
+        </div>
       `;
     };
 
