@@ -1,16 +1,11 @@
 import MainPage from '.';
 
 describe('Main Page Test', () => {
-  let $container;
-  let mainPage;
-
-  beforeEach(() => {
-    $container = document.createElement('div');
-    mainPage = new MainPage($container);
-  });
+  let $container = document.createElement('div');
+  let mainPage = new MainPage($container);
 
   afterEach(() => {
-    $container.innerHTML = '';
+    $container = null;
   });
 
   it('should render main wrapper', () => {
@@ -35,17 +30,4 @@ describe('Main Page Test', () => {
     const expectedHTML = mainPage.contentHTML();
     expect($container.innerHTML).toBe(expectedHTML);
   });
-
-  // it('should handle click event on videoPlay button', () => {
-  //   const videoPlay = $container.querySelector('.videoPlay');
-  //   const titleUp = $container.querySelector('.titleUp');
-  //   const titleDown = $container.querySelector('.titleDown');
-
-  //   videoPlay.click();
-
-  //   expect(titleUp.style.top).toBe('-20%');
-  //   expect(titleUp.style.opacity).toBe('0');
-  //   expect(titleDown.style.top).toBe('120%');
-  //   expect(titleDown.style.opacity).toBe('0');
-  // });
 });

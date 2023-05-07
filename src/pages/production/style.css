@@ -1,0 +1,42 @@
+/* common */
+.productionWrapper {
+  width : 100vw;
+}
+
+.productionWrapper .dim {
+  height : 7.5rem;
+  width : 100vw;
+}
+
+.playerSection {
+  gap : 2rem;
+  height : 75vh;
+}
+
+.productionWrapper .playerSection .musicPlayer {
+  background-color: white;
+  width : 10rem;
+  height : 15rem;
+
+  border-radius : 1rem;
+
+  color : black;
+}
+
+@media (max-width: 768px) {
+  .playerSection {
+    margin-top : 2rem;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: max-content;
+    gap : 5rem;
+  }
+
+  .productionWrapper .playerSection .musicPlayer {
+    width : calc(100% - 4rem);
+    height: 20rem;
+  }
+}

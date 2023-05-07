@@ -16,8 +16,8 @@ class MainPage {
     };
 
     this.render = () => {
-      $('footer').innerHTML = '';
       this.$container.innerHTML = this.contentHTML();
+      $('footer').innerHTML = '';
       new VideoSection($('.videoSection'));
       new ArtistSection($('.artistSection'));
       new ArchiveSection($('.archiveSection'));
