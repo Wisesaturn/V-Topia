@@ -5,6 +5,10 @@
   --swiper-pagination-bullet-vertical-gap : 1rem;
 }
 
+.isButton {
+  cursor : pointer;
+}
+
 body {
   margin : 0;
   padding : 0;
@@ -54,7 +58,7 @@ nav > .menu:hover {
 }
 
 footer {
-  width : 100%;
+  width : 100vw;
   text-align: center;
   
   color : #999;
