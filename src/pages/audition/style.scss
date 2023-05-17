@@ -1,0 +1,35 @@
+.AuditionPage {
+  section {
+    .first {
+      font-size: 48px;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      padding: 120px 32px 80px 32px;
+    }
+    .second {
+      font-size: 24px;
+      display: flex;
+      font-weight: 500;
+      justify-content: center;
+    }
+    .third {
+      display: flex;
+      justify-content: center;
+      height: 180px;
+      padding: 120px 32px 60px 32px;
+    }
+    .fourth {
+      font-size: 22px;
+      display: flex;
+      justify-content: center;
+      padding: 40px 0px;
+    }
+    .fifth {
+      display: flex;
+      justify-content: center;
+      padding: 20px 32px 50px 32px;
+      height: 160px;
+    }
+  }
+}
