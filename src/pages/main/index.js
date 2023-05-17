@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 import { $ } from '@utils/querySelector';
 
 import VideoSection from './videoSection';

@@ -69,3 +69,7 @@ footer {
 ::-webkit-scrollbar {
   display : none;
 }
+
+.dim {
+  height : 7.5rem;
+}

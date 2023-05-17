@@ -1,0 +1,96 @@
+.productionPage {
+    width : 100vw;
+
+  .dim {
+    height : 7.5rem;
+  }
+
+  .playerSection {
+    display : flex;
+    gap : 2rem;
+    height : 75vh;
+    max-width : calc(100% - 4rem);
+
+    justify-content: center;
+    align-items: center;
+    
+    margin : 0 auto;
+  }
+
+  .playerSection .musicPlayerWrapper {
+    width : 100%;
+    border-radius : 1rem;
+
+    color : black;
+    display : flex;
+    flex-direction: column;
+
+    gap : 2rem;
+  }
+
+  .playerSection .musicPlayerContainer {
+    position : relative;
+    display : flex;
+    flex-direction: column;
+
+    width : 100%;
+    height : 25rem;
+
+    background-color: white;
+    border-radius : 1rem;
+
+    color : black;
+  }
+
+  /* thumbnail */
+  .playerSection .musicPlayerContainer .thumbnail {
+    background-color : pink;
+
+    padding : 8rem 1rem;
+    margin: 1rem;
+
+    text-align : center;
+  }
+
+  .playerSection .musicPlayerContainer .explain {
+    margin : 1rem;
+  }
+
+  .playerSection .musicPlayerWrapper .playerline {
+    display : flex;
+    gap : 1rem;
+
+    justify-items: center;
+    align-items: center;
+
+    background-color : white;
+    border-radius : 9999px;
+    
+    padding : .5rem 1rem;
+  }
+
+  .playerSection .musicPlayerWrapper .playerline .playerlineGauge {
+    background-color : #ccc;
+    padding : 0.15rem 0;
+    width : 100%;
+    
+    border-radius : 9999px;
+  }
+
+  @media (max-width: 768px) {
+    .playerSection {
+      margin-top : 2rem;
+      display : flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      height: max-content;
+      gap : 5rem;
+    }
+
+    .playerSection .musicPlayerContainer {
+      height: 25rem;
+    }
+  }
+}

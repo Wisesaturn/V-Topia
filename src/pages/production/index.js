@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 import { $ } from '@utils/querySelector';
 
 import MusicPlayer from './musicPlayer';
@@ -18,7 +18,7 @@ class ProductionPage {
 
     this.contentHTML = () => {
       return `
-        <main class="productionWrapper">
+        <main class="productionPage">
           <div class="dim"></div>
           <section class="playerSection">
           </section>
