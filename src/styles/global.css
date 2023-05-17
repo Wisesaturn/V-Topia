@@ -19,9 +19,10 @@ body {
   min-width : 768px;
 }
 
-a {
+a, .likedButton {
   text-decoration: none;
   color : white;
+  cursor : pointer;
 }
 
 header {
@@ -78,3 +79,43 @@ footer {
   text-align: center;
   padding : 3rem 0;
 }
+
+.dropDown {
+  position : absolute;
+  text-align : center;
+
+  transition : .3s;
+}
+
+.dropDown li {
+  list-style-type : none;
+
+  padding : .75rem 1.5rem;
+  cursor : pointer;
+
+  background-color : #333;
+}
+
+.dropDown.closed {
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.dropDownWrapper {
+  display : flex;
+
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+.dropDownWrapper ul {
+  padding-inline-start: 0;
+
+  margin-top : 3rem;
+
+  background-color : black;
+  border : 1px solid white;
+}
+
