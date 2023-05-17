@@ -1,4 +1,5 @@
 import ErrorPage from '@pages/error';
+import { $ } from '@utils/querySelector';
 
 import { routes } from './path';
 
@@ -6,18 +7,25 @@ class Router {
   constructor($container) {
     this.$container = $container;
     let currentPage = '';
+    let isData = '';
 
     const findMatchedPath = (currentPath) => {
       const findData = routes.find((route) => {
         return route.path === currentPath;
       });
 
-      return findData?.page;
+      return findData ?? false;
+    };
+
+    const setMetaTag = () => {
+      $('title').innerHTML = isData?.title;
     };
 
     const routing = () => {
       if (currentPage) currentPage.unmount();
-      const TargetPage = findMatchedPath(location.pathname) || ErrorPage;
+      isData = findMatchedPath(location.pathname);
+      const TargetPage = isData.page || ErrorPage;
+      if (isData) setMetaTag();
       currentPage = new TargetPage($container);
     };
 

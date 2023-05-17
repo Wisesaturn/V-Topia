@@ -1,4 +1,8 @@
 .AuditionPage {
+  ul {
+    padding : 0;
+  }
+
   section {
     .first {
       font-size: 48px;
@@ -32,4 +36,11 @@
       height: 160px;
     }
   }
+
+  #audition_dim {
+        z-index : 5;
+        position : sticky;
+        top : 0;
+        background-color : black;
+    }
 }

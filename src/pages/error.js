@@ -13,7 +13,8 @@ class ErrorPage {
     this.render = () => {
       this.$container.innerHTML = `
       <main class="errorPage">
-        해당 페이지를 찾을 수 없습니다
+        <div class="dim"></div>
+        <h2>해당 페이지를 찾을 수 없습니다</h2>
       </main>
     `;
     };

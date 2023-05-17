@@ -19,7 +19,7 @@ class AuditionPage {
     this.contentHTML = () => {
       return `
         <main class="AuditionPage">
-          <div class="dim"></div>
+          <div id="audition_dim" class="dim"></div>
           <section>
             <ul class="inner">
             <li class="first">AUDITION</li>
