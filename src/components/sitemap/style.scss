@@ -4,23 +4,44 @@
     top : 0;
     left : 0;
 
-    background-color : grey;
+    background-color : #565656;
+    opacity : .95;
+
     width : 100vw;
     height : 100vh;
-
-    display : flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding : 2rem;
     
     #closeBtn {
       position : absolute;
       top : 2rem;
-      right : 6rem;
+      right : 2rem;
     }
 
     &.closed {
       display : none;
     }
+  }
+
+  .sitemapCategory {
+    display : flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap : 4rem;
+
+    margin-top : 11rem;
+
+    .category {
+      text-align: center;
+    }
+  }
+
+  .sitemapSNS {
+    margin-top : 10rem;
+
+    display : flex;
+    gap : 1.5rem;
+
+    align-items: center;
+    justify-content: center;
   }
 }

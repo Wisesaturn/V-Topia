@@ -17,11 +17,12 @@ class MainPage {
 
     this.render = () => {
       if (this.$container) this.$container.innerHTML = this.contentHTML();
-      if ($('footer')) $('footer').innerHTML = '';
+      if ($('footer')) $('footer').style.display = 'none';
       new VideoSection($('.videoSection'));
       new ArtistSection($('.artistSection'));
       new ArchiveSection($('.archiveSection'));
 
+      document.body.style.setProperty('overflow-y', 'hidden');
       this.useAlbumFlip();
       this.useVideoPlay();
     };
@@ -97,7 +98,9 @@ class MainPage {
     this.unmount = () => {
       document.body.style.setProperty('overflow-y', 'scroll');
       this.$container.innerHTML = '';
+
       $('footer').innerHTML = '© V-Topia';
+      $('footer').style.display = 'block';
     };
 
     this.render();
