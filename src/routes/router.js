@@ -1,5 +1,5 @@
 import ErrorPage from '@pages/error';
-import { $ } from '@utils/querySelector';
+import { $ } from '@utils/useQuerySelector';
 
 import { routes } from './path';
 

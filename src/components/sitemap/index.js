@@ -10,7 +10,7 @@ class Sitemap {
 
     this.contentHTML = () => {
       return `
-        내용
+        menu
       `;
     };
 

@@ -1,4 +1,4 @@
-import { $ } from '@utils/querySelector';
+import { $ } from '@utils/useQuerySelector';
 
 import App from './app';
 

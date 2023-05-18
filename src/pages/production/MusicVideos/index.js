@@ -1,4 +1,4 @@
-import { $ } from '@utils/querySelector';
+import { $ } from '@utils/useQuerySelector';
 
 class MusicVideosPage {
   constructor($container) {

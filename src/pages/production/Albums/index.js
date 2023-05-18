@@ -1,5 +1,5 @@
 import './style.scss';
-import { $ } from '@utils/querySelector';
+import { $ } from '@utils/useQuerySelector';
 
 import MusicPlayer from './musicPlayer';
 
