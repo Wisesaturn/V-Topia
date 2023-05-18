@@ -3,6 +3,8 @@ import useDropDown from '@utils/useDropDown';
 import useSPA from '@utils/useSPA';
 import Sitemap from '@components/sitemap';
 
+import '@styles/dropDown.css';
+
 class App {
   constructor($container) {
     this.$container = $container;

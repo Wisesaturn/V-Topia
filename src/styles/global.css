@@ -19,10 +19,29 @@ body {
   min-width : 768px;
 }
 
-a, .likedButton {
+a, .likedButton, .likedCircleBtn {
   text-decoration: none;
   color : white;
   cursor : pointer;
+}
+
+.likedCircleBtn {
+  background-color: white;
+  color: black;
+
+  width : 3rem;
+  height : 3rem;
+  border-radius : 9999px;
+
+  transition : 0.5s ease-in-out;
+
+  display : flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-box-shadow: 0 1px 9.5px 1px #aaaaaa;
+  -moz-box-shadow: 0 1px 9.5px 1px #aaaaaa;
+  box-shadow: 0 1px 9.5px 1px #aaaaaa;
 }
 
 header {
@@ -54,10 +73,6 @@ nav {
   align-items : center;
 }
 
-nav > .menu:hover {
-  cursor : pointer;
-}
-
 footer {
   width : 100vw;
   text-align: center;
@@ -71,6 +86,7 @@ footer {
   display : none;
 }
 
+/* for Header Space */
 .dim {
   height : 7.5rem;
 }
@@ -79,47 +95,3 @@ footer {
   text-align: center;
   padding : 3rem 0;
 }
-
-.dropDown {
-  position : absolute;
-  text-align : center;
-
-  transition : .3s;
-}
-
-.dropDown li {
-  list-style-type : none;
-
-  padding : .75rem 1.5rem;
-  cursor : pointer;
-
-  background-color : #333;
-}
-
-.dropDown.closed {
-  opacity: 0;
-  overflow: hidden;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
-}
-
-.dropDown.hidden {
-  display : none;
-}
-
-.dropDownWrapper {
-  display : flex;
-
-  align-items: flex-start;
-  justify-content: center;
-
-}
-
-.dropDownWrapper ul {
-  padding-inline-start: 0;
-
-  margin-top : 3rem;
-
-  background-color : black;
-  border : 1px solid white;
-}
-

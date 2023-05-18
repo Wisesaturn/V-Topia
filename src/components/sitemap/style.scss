@@ -1,0 +1,26 @@
+.sitemapWrapper {
+  #sitemap {
+    position : fixed;
+    top : 0;
+    left : 0;
+
+    background-color : grey;
+    width : 100vw;
+    height : 100vh;
+
+    display : flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding : 2rem;
+    
+    #closeBtn {
+      position : absolute;
+      top : 2rem;
+      right : 6rem;
+    }
+
+    &.closed {
+      display : none;
+    }
+  }
+}
