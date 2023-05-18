@@ -1,9 +1,9 @@
-import './style.scss';
 import { $ } from '@utils/querySelector';
 
 import VideoSection from './videoSection';
 import ArtistSection from './artistSection';
 import ArchiveSection from './archiveSection';
+import './style.scss';
 
 class MainPage {
   constructor($container) {
@@ -16,8 +16,8 @@ class MainPage {
     };
 
     this.render = () => {
-      this.$container.innerHTML = this.contentHTML();
-      $('footer').innerHTML = '';
+      if (this.$container) this.$container.innerHTML = this.contentHTML();
+      if ($('footer')) $('footer').innerHTML = '';
       new VideoSection($('.videoSection'));
       new ArtistSection($('.artistSection'));
       new ArchiveSection($('.archiveSection'));

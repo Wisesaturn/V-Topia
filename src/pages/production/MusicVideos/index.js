@@ -1,9 +1,6 @@
-import './style.scss';
 import { $ } from '@utils/querySelector';
 
-import MusicPlayer from './musicPlayer';
-
-class AlbumsPage {
+class MusicVideosPage {
   constructor($container) {
     this.$container = $container;
 
@@ -13,15 +10,13 @@ class AlbumsPage {
 
     this.render = () => {
       this.$container.innerHTML = this.contentHTML();
-      new MusicPlayer($('.playerSection'));
     };
 
     this.contentHTML = () => {
       return `
-        <main class="albumsPage">
+        <main class="musicVideosPage">
           <div class="dim"></div>
-          <section class="playerSection">
-          </section>
+          뮤직비디오 페이지입니다.
         </main>
       `;
     };
@@ -34,4 +29,4 @@ class AlbumsPage {
   }
 }
 
-export default AlbumsPage;
+export default MusicVideosPage;
