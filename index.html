@@ -14,11 +14,37 @@
         <img src="/logo.png" alt="v-topia">
       </a>
       <nav>
-        <a href="/artist">ARTIST</a>
-        <a href="/production">PRODUCTION</a>
+        <div class="dropDownWrapper">
+          <p id="Artist" class="dropDownTitle likedButton">ARTIST</p>
+          <ul class="dropDown dropDownArtist closed">
+            <li>
+              <a href="/artist/vivian">Vivian</a>
+            </li>
+            <li>
+              <a href="/artist/jooa">Jooa</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropDownWrapper">
+          <p id="Production" class="dropDownTitle likedButton">PRODUCTION</p>
+          <ul class="dropDown dropDownProduction closed">
+            <li>
+              <a href="/production/albums">Albums</a>
+            </li>
+            <li>
+              <a href="/production/music-videos">Music Videos</a>
+            </li>
+            <li>
+              <a href="/production/photos">Photos</a>
+            </li>
+          </ul>
+        </div>
         <a href="/producer">PRODUCER</a>
         <a href="/audition">AUDITION</a>
-        <div class="material-icons menu">menu</div>
+        <div class="sitemapWrapper">
+          <span id="openSitemap" class="likedButton material-icons">menu</span>
+          <div id="sitemap" class="closed"></div>
+        </div>
       </nav>
     </header>
     <div id="app"></div>

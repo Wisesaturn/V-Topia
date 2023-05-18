@@ -1,0 +1,47 @@
+.sitemapWrapper {
+  #sitemap {
+    position : fixed;
+    top : 0;
+    left : 0;
+
+    background-color : #565656;
+    opacity : .95;
+
+    width : 100vw;
+    height : 100vh;
+    
+    #closeBtn {
+      position : absolute;
+      top : 2rem;
+      right : 2rem;
+    }
+
+    &.closed {
+      display : none;
+    }
+  }
+
+  .sitemapCategory {
+    display : flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap : 4rem;
+
+    margin-top : 11rem;
+
+    .category {
+      text-align: center;
+    }
+  }
+
+  .sitemapSNS {
+    margin-top : 10rem;
+
+    display : flex;
+    gap : 1.5rem;
+
+    align-items: center;
+    justify-content: center;
+  }
+}

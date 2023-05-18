@@ -24,9 +24,13 @@ describe('HTML Test', () => {
 
   it('should have all necessary links', () => {
     const links = document.querySelectorAll('nav a');
-    expect(links.length).toBe(3);
-    expect(links[0].getAttribute('href')).toBe('/artist');
-    expect(links[1].getAttribute('href')).toBe('/production');
-    expect(links[2].getAttribute('href')).toBe('/producer');
+    expect(links.length).toBe(7);
+    expect(links[0].getAttribute('href')).toBe('/artist/vivian');
+    expect(links[1].getAttribute('href')).toBe('/artist/jooa');
+    expect(links[2].getAttribute('href')).toBe('/production/albums');
+    expect(links[3].getAttribute('href')).toBe('/production/music-videos');
+    expect(links[4].getAttribute('href')).toBe('/production/photos');
+    expect(links[5].getAttribute('href')).toBe('/producer');
+    expect(links[6].getAttribute('href')).toBe('/audition');
   });
 });

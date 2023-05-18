@@ -1,4 +1,5 @@
 import './style.scss';
+import { $ } from '@utils/useQuerySelector';
 
 class ProducerPage {
   constructor($container) {
@@ -10,12 +11,13 @@ class ProducerPage {
 
     this.unmount = () => {
       this.$container.innerHTML = '';
+      $('footer').innerHTML = '© V-Topia';
     };
 
-    this.render = () => {
-      this.$container.innerHTML = `
+    this.contentHTML = () => {
+      return `
       <main class="producerPage">
-        <div class="dim"></div>
+        <div id="producer_dim" class="dim"></div>
         <section>
           <div class="inner">
               <div class="title">V-TOPIA</div>
@@ -80,8 +82,14 @@ class ProducerPage {
               </div>
             </div>
         </section>
+        <div class="dim"></div>
       </main>
     `;
+    };
+
+    this.render = () => {
+      $('footer').innerHTML = '';
+      this.$container.innerHTML = this.contentHTML();
     };
 
     this.render();

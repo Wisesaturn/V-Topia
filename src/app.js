@@ -1,26 +1,21 @@
 import Router from '@routes/router';
+import useDropDown from '@utils/useDropDown';
+import useSPA from '@utils/useSPA';
+import Sitemap from '@components/sitemap';
 
-import { $ } from './utils/querySelector';
-
-const LOCAL_URL = 'http://localhost:5173/';
+import '@styles/dropDown.css';
 
 class App {
   constructor($container) {
     this.$container = $container;
 
-    $('.link').addEventListener('click', (e) => {
-      const target = e.target.closest('a');
-      if (!(target instanceof HTMLAnchorElement)) return;
-
-      e.preventDefault();
-      if (String(target).replace(LOCAL_URL, '/') === location.pathname)
-        history.replaceState('', '', target);
-      else history.pushState('', '', target);
-
-      dispatchEvent(new Event('popstate'));
-    });
+    /* SPA */
+    useSPA();
+    /* DropDown */
+    useDropDown();
 
     new Router($container);
+    new Sitemap(document.getElementById('sitemap'));
   }
 }
 

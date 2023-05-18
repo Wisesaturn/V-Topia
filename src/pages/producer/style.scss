@@ -201,4 +201,11 @@
     section .inner .name > ul > li {
         padding: 12px;
     }
+
+    #producer_dim {
+        z-index : 5;
+        position : sticky;
+        top : 0;
+        background-color : black;
+    }
 }
