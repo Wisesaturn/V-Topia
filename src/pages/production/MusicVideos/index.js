@@ -16,7 +16,10 @@ class MusicVideosPage {
       return `
         <main class="musicVideosPage">
           <div class="dim"></div>
-          뮤직비디오 페이지입니다.
+          <div style="text-align: center; margin-top: 40px;">
+          <iframe width="1300" height="700" src="https://www.youtube.com/embed/do6qxlhM5fI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
         </main>
       `;
     };
