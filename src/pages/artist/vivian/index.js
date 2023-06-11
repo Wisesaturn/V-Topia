@@ -53,31 +53,34 @@ class VivianPage {
                       <span class="material-symbols-outlined">
                           music_note
                       </span>
-                      <p>2023.05.30</p>
+                      <p>2023.06.02</p>
                       <div class="line"></div>
-                      <p>DEBUT</p>
+                      <p>YOU</p>
                       <img src="/vivian_album.png" alt="image">
-                      <p>MORE</p>
+                      <p><a href="https://www.youtube.com/watch?v=FlemtiZsQeA
+                        ">more</a></p>
                     </div> 
                     <div class="music">
                         <span class="material-symbols-outlined">
                             music_note
                         </span>
-                        <p>2023.05.30</p>
+                        <p>2023.06.02</p>
                         <div class="line"></div>
-                        <p>TITLE</p>
+                        <p>WHAT I WANT</p>
                         <img src="/vivian_album.png" alt="image">
-                        <p>MORE</p>
+                        <p><a href="https://www.youtube.com/watch?v=I5bsHM8HC6o
+                        ">more</a></p>
                     </div>
                     <div class="music">
                         <span class="material-symbols-outlined">
                             music_note
                         </span>
-                        <p>2023.05.30</p>
+                        <p>2023.06.02</p>
                         <div class="line"></div>
-                        <p>TITLE</p>
+                        <p>HELLO MY FRIENDS</p>
                         <img src="/vivian_album.png" alt="image">
-                        <p>MORE</p>
+                        <p><a href=" https://www.youtube.com/watch?v=wcq7m82ZOXk
+                        ">more</a></p>
                     </div>
                   </div>
                 </section>
