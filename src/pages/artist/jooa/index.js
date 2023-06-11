@@ -48,18 +48,6 @@ class VivianPage {
               </swiper-slide>
               <swiper-slide>
                 <section>
-                  <div class="inner2">
-                    <div class="music">
-                      <span class="material-symbols-outlined">
-                           
-                      </span>
-                      <p>2023.05.30</p>
-                      <div class="line"></div>
-                      <p>DEBUT</p>
-                      <img src="/artist_album_ex.png" alt="image">
-                      <p>MORE</p>
-                    </div> 
-                    
                     <div class="inner2">
                     <p>SUNRISE</p>
                     <div style="text-align: center; margin-top: 40px;">
