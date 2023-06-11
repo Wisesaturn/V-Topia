@@ -1,4 +1,6 @@
-class JooaPage {
+import './style.scss';
+
+class VivianPage {
   constructor($container) {
     this.$container = $container;
 
@@ -16,9 +18,71 @@ class JooaPage {
 
     this.contentHTML = () => {
       return `
-        <main class="jooaPage">
-          <div class="dim"></div>
-          주아페이지 입니다
+        <main class="vivianPage">
+          <swiper-container direction="vertical" pagination="true" pagination-clickable="true" space-between="30" mousewheel="true">
+              <swiper-slide>
+                <section>
+                  <div class="inner">
+                    <ul>
+                          <li>J</li>
+                          <li>O</li>
+                          <li>O</li>
+                          <li>A</li>
+                          <li>H</li>
+                  
+
+                      <span class="material-icons">
+                              arrow_downward
+                      </span>
+                    </ul>
+                  </div>
+                </section>
+              </swiper-slide>
+              <swiper-slide>
+                <section>
+                  <div class="profile">
+                    <img src="/vivian_ex.jpg" alt="vivian"> 
+                     <img src="/vivian_intro.jpg" alt="vivian소개"> 
+                  </div>
+                </section>
+              </swiper-slide>
+              <swiper-slide>
+                <section>
+                  <div class="inner2">
+                    <div class="music">
+                      <span class="material-symbols-outlined">
+                          music_note
+                      </span>
+                      <p>2023.05.30</p>
+                      <div class="line"></div>
+                      <p>DEBUT</p>
+                      <img src="/artist_album_ex.png" alt="image">
+                      <p>MORE</p>
+                    </div> 
+                    <div class="music">
+                        <span class="material-symbols-outlined">
+                            music_note
+                        </span>
+                        <p>2023.05.30</p>
+                        <div class="line"></div>
+                        <p>TITLE</p>
+                        <img src="/artist_album_ex.png" alt="image">
+                        <p>MORE</p>
+                    </div>
+                    <div class="music">
+                        <span class="material-symbols-outlined">
+                            music_note
+                        </span>
+                        <p>2023.05.30</p>
+                        <div class="line"></div>
+                        <p>TITLE</p>
+                        <img src="/artist_album_ex.png" alt="image">
+                        <p>MORE</p>
+                    </div>
+                  </div>
+                </section>
+              </swiper-slide>
+          </swiper-container>            
         </main>
       `;
     };
@@ -27,4 +91,46 @@ class JooaPage {
   }
 }
 
-export default JooaPage;
+export default VivianPage;
+
+//  <swiper-slide>
+//                 <content>
+
+//                 </content>
+//               </swiper-slide>
+//               <swiper-slide>
+//                 <content>
+//                   <div class="inner2">
+//                     <div class="music">
+//                         <span class="material-symbols-outlined">
+//                             music_note
+//                         </span>
+//                         <p>2023.05.30</p>
+//                         <div class="line"></div>
+//                         <p>DEBUT</p>
+//                         <img src="/artist_album_ex.png" alt="image">
+//                         <p>MORE</p>
+//                     </div>
+//                     <div class="music">
+//                         <span class="material-symbols-outlined">
+//                             music_note
+//                         </span>
+//                         <p>2023.05.30</p>
+//                         <div class="line"></div>
+//                         <p>TITLE</p>
+//                         <img src="/artist_album_ex.png" alt="image">
+//                         <p>MORE</p>
+//                     </div>
+//                     <div class="music">
+//                         <span class="material-symbols-outlined">
+//                             music_note
+//                         </span>
+//                         <p>2023.05.30</p>
+//                         <div class="line"></div>
+//                         <p>TITLE</p>
+//                         <img src="/artist_album_ex.png" alt="image">
+//                         <p>MORE</p>
+//                     </div>
+//                   </div>
+//                 </content>
+//               </swiper-slide>
