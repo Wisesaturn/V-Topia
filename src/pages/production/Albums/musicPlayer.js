@@ -12,7 +12,7 @@ class MusicPlayer {
     this.contentHTML = () => {
       const musicsData = [
         {
-          thumbnailUrl: 'https://cdn.v-topia.co.kr/V-Topia/Music/Thumbnail_You.png',
+          thumbnailUrl: 'https://cdn.v-topia.co.kr/V-Topia/Image/vivian-album.webp',
           MusicMp3Url: 'https://cdn.v-topia.co.kr/V-Topia/Music/You.mp3',
           MusicWavUrl: 'https://cdn.v-topia.co.kr/V-Topia/Music/You.wav',
           title: 'You',
@@ -22,7 +22,17 @@ class MusicPlayer {
           `,
         },
         {
-          thumbnailUrl: 'https://cdn.v-topia.co.kr/V-Topia/Music/Thumbnail_You.png',
+          thumbnailUrl: 'https://cdn.v-topia.co.kr/V-Topia/Image/vivian-album.webp',
+          MusicMp3Url: 'https://cdn.v-topia.co.kr/V-Topia/Music/What-I-Want.mp3',
+          MusicWavUrl: 'https://cdn.v-topia.co.kr/V-Topia/Music/What-I-Want.wav',
+          title: 'What I Want!',
+          explain: `Composed by 공현중, 송명훈, 이채린
+          Lyrics by 공현중, 이채린, 송명훈
+          Arranged by 공현중, 송명훈
+          `,
+        },
+        {
+          thumbnailUrl: 'https://cdn.v-topia.co.kr/V-Topia/Image/vivian-album.webp',
           MusicMp3Url: 'https://cdn.v-topia.co.kr/V-Topia/Music/Hello-my-friends.mp3',
           MusicWavUrl: 'https://cdn.v-topia.co.kr/V-Topia/Music/Hello-my-friends.wav',
           title: 'Hello My Friends',
@@ -32,17 +42,7 @@ class MusicPlayer {
           `,
         },
         {
-          thumbnailUrl: 'https://cdn.v-topia.co.kr/V-Topia/Music/Thumbnail_You.png',
-          MusicMp3Url: 'https://cdn.v-topia.co.kr/V-Topia/Music/What-I-Want.mp3',
-          MusicWavUrl: 'https://cdn.v-topia.co.kr/V-Topia/Music/What-I-Want.wav',
-          title: 'What I Want!',
-          explain: `Composed by 공현중, 송명훈, 이채린
-                    Lyrics by 공현중, 이채린, 송명훈
-                    Arranged by 공현중, 송명훈
-          `,
-        },
-        {
-          thumbnailUrl: 'https://cdn.v-topia.co.kr/V-Topia/Music/Thumbnail_You.png',
+          thumbnailUrl: 'https://cdn.v-topia.co.kr/V-Topia/Image/jooa-album.webp',
           MusicMp3Url: 'https://cdn.v-topia.co.kr/V-Topia/Music/Sunrise.mp3',
           MusicWavUrl: 'https://cdn.v-topia.co.kr/V-Topia/Music/Sunrise.wav',
           title: 'Sunrise',
@@ -60,7 +60,7 @@ class MusicPlayer {
          <div class="musicPlayerWrapper" id=${idx}>
           <div class="musicPlayerContainer" id=${idx}>
             <div class="thumbnail">
-              <img src=${thumbnailUrl} alt="Thumbnail_You" ></img>
+              <img src=${thumbnailUrl} alt="Thumbnail">
             </div>
             <div class="explain-title">${title}</div>
             <div class="explain">${explain}</div>

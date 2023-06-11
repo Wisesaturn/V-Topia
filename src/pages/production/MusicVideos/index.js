@@ -1,4 +1,5 @@
 import { $ } from '@utils/useQuerySelector';
+import './style.scss';
 
 class MusicVideosPage {
   constructor($container) {
@@ -10,22 +11,24 @@ class MusicVideosPage {
 
     this.render = () => {
       this.$container.innerHTML = this.contentHTML();
+      if ($('footer')) $('footer').style.display = 'none';
     };
 
     this.contentHTML = () => {
       return `
         <main class="musicVideosPage">
-          <div class="dim"></div>
-          <div style="text-align: center; margin-top: 40px;">
-          <iframe width="1300" height="700" src="https://www.youtube.com/embed/do6qxlhM5fI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-
+          <video playsinline="" loop="" autoplay preload="metadata" data-desktop-url="https://cdn.v-topia.co.kr/V-Topia/Video/V-Topia-Trailer.mp4">
+            <source src="https://cdn.v-topia.co.kr/V-Topia/Video/What-I-Want.mp4" type="video/mp4">
+          </video>
         </main>
       `;
     };
 
     this.unmount = () => {
       this.$container.innerHTML = '';
+
+      $('footer').innerHTML = '© V-Topia';
+      $('footer').style.display = 'block';
     };
 
     this.render();
