@@ -51,7 +51,7 @@ class VivianPage {
                   <div class="inner2">
                     <div class="music">
                       <span class="material-symbols-outlined">
-                          music_note
+                           
                       </span>
                       <p>2023.06.02</p>
                       <div class="line"></div>
@@ -62,7 +62,7 @@ class VivianPage {
                     </div> 
                     <div class="music">
                         <span class="material-symbols-outlined">
-                            music_note
+                             
                         </span>
                         <p>2023.06.02</p>
                         <div class="line"></div>
@@ -73,7 +73,7 @@ class VivianPage {
                     </div>
                     <div class="music">
                         <span class="material-symbols-outlined">
-                            music_note
+                             
                         </span>
                         <p>2023.06.02</p>
                         <div class="line"></div>
