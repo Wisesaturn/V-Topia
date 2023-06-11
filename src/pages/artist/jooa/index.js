@@ -18,7 +18,7 @@ class VivianPage {
 
     this.contentHTML = () => {
       return `
-        <main class="vivianPage">
+        <main class="JooaPage">
           <swiper-container direction="vertical" pagination="true" pagination-clickable="true" space-between="30" mousewheel="true">
               <swiper-slide>
                 <section>
@@ -49,12 +49,18 @@ class VivianPage {
               <swiper-slide>
                 <section>
                     <div class="inner2">
-                    <p>SUNRISE</p>
-                    <div style="text-align: center; margin-top: 40px;">
-                    <iframe width="1200" height="620" src="https://www.youtube.com/embed/fgMQsp0Svsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      <div class="music">
+                        <span class="material-symbols-outlined">
+                            
+                        </span>
+                        <p>2023.06.09</p>
+                        <div class="line"></div>
+                        <p>Sunrise</p>
+                        <img src="https://cdn.v-topia.co.kr/V-Topia/Image/jooa-album.webp" alt="Thumbnail">
+                        <p><a href="https://www.youtube.com/watch?v=fgMQsp0Svsk
+                          ">more</a></p>
+                      </div> 
                     </div>
-                    </div>
-                  </div>
                 </section>
               </swiper-slide>
           </swiper-container>            

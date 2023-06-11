@@ -22,7 +22,7 @@ class ArtistSection {
             </div>
           </a>
         </div>
-        <img src="artist.png" alt="artist" />
+        <img src="artist.webp" alt="artist" />
       `;
     };
 

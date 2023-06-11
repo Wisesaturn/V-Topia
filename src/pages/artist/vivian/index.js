@@ -56,7 +56,7 @@ class VivianPage {
                       <p>2023.06.02</p>
                       <div class="line"></div>
                       <p>YOU</p>
-                      <img src="/vivian_album.png" alt="image">
+                      <img src="https://cdn.v-topia.co.kr/V-Topia/Image/vivian-album.webp" alt="Thumbnail">
                       <p><a href="https://www.youtube.com/watch?v=FlemtiZsQeA
                         ">more</a></p>
                     </div> 
@@ -67,7 +67,7 @@ class VivianPage {
                         <p>2023.06.02</p>
                         <div class="line"></div>
                         <p>WHAT I WANT</p>
-                        <img src="/vivian_album.png" alt="image">
+                        <img src="https://cdn.v-topia.co.kr/V-Topia/Image/vivian-album.webp" alt="Thumbnail">
                         <p><a href="https://www.youtube.com/watch?v=I5bsHM8HC6o
                         ">more</a></p>
                     </div>
@@ -78,7 +78,7 @@ class VivianPage {
                         <p>2023.06.02</p>
                         <div class="line"></div>
                         <p>HELLO MY FRIENDS</p>
-                        <img src="/vivian_album.png" alt="image">
+                        <img src="https://cdn.v-topia.co.kr/V-Topia/Image/vivian-album.webp" alt="Thumbnail">
                         <p><a href=" https://www.youtube.com/watch?v=wcq7m82ZOXk
                         ">more</a></p>
                     </div>

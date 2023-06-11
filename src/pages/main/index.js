@@ -62,7 +62,9 @@ class MainPage {
 
       albums.forEach((album) => {
         const albumEvent = () => {
-          album.classList.toggle('flip');
+          if (album.classList.contains('flip')) return;
+
+          album.classList.add('flip');
         };
 
         if (album.classList.contains('flipOn')) return;

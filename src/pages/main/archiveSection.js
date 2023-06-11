@@ -20,18 +20,24 @@ class ArchiveSection {
           <div class="archives">
             <div class="album">
               <div class="front">
-                앞면 내용
+                <img src="https://cdn.v-topia.co.kr/V-Topia/Image/vivian-album.webp" alt="Thumbnail">
               </div>
               <div class="back">
-                뒷면 내용
+               <a href="https://v-topia.co.kr/production/albums">
+                <p>Vivian</p>
+                <div class="material-icons playbtn">play_arrow</div>
+               </a>
               </div>
             </div>
             <div class="album">
               <div class="front">
-                앞면 내용
+                <img src="https://cdn.v-topia.co.kr/V-Topia/Image/jooa-album.webp" alt="Thumbnail">
               </div>
               <div class="back">
-                뒷면 내용
+                <a href="https://v-topia.co.kr/production/albums">
+                  <p>Jooa</p>
+                  <div class="material-icons playbtn">play_arrow</div>
+                </a>
               </div>
             </div>
           </div>
