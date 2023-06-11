@@ -56,7 +56,7 @@ class VivianPage {
                       <p>2023.05.30</p>
                       <div class="line"></div>
                       <p>DEBUT</p>
-                      <img src="/artist_album_ex.png" alt="image">
+                      <img src="/vivian_album.png" alt="image">
                       <p>MORE</p>
                     </div> 
                     <div class="music">
@@ -66,7 +66,7 @@ class VivianPage {
                         <p>2023.05.30</p>
                         <div class="line"></div>
                         <p>TITLE</p>
-                        <img src="/artist_album_ex.png" alt="image">
+                        <img src="/vivian_album.png" alt="image">
                         <p>MORE</p>
                     </div>
                     <div class="music">
@@ -76,7 +76,7 @@ class VivianPage {
                         <p>2023.05.30</p>
                         <div class="line"></div>
                         <p>TITLE</p>
-                        <img src="/artist_album_ex.png" alt="image">
+                        <img src="/vivian_album.png" alt="image">
                         <p>MORE</p>
                     </div>
                   </div>
