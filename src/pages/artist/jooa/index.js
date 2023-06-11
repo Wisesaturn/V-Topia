@@ -41,8 +41,8 @@ class VivianPage {
               <swiper-slide>
                 <section>
                   <div class="profile">
-                    <img src="/vivian_ex.jpg" alt="vivian"> 
-                     <img src="/vivian_intro.jpg" alt="vivian소개"> 
+                    <img src="/jooa_ex.jpg" alt="jooa"> 
+                     <img src="/jooa_intro.jpg" alt="jooa소개"> 
                   </div>
                 </section>
               </swiper-slide>
