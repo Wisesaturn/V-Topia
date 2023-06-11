@@ -9,6 +9,7 @@
     display : flex;
     gap : 2rem;
     height : 75vh;
+    width : 100%;
     max-width : calc(100% - 4rem);
 
     justify-content: center;
@@ -18,7 +19,6 @@
   }
 
   .playerSection .musicPlayerWrapper {
-    width : 100%;
     border-radius : 1rem;
 
     color : black;
@@ -33,7 +33,6 @@
     display : flex;
     flex-direction: column;
 
-    width : 100%;
     height : 25rem;
 
     background-color: white;
@@ -46,7 +45,7 @@
   .thumbnail {
     overflow : hidden;
     padding : 0;
-    
+
     img {
       object-fit : cover;
     }
@@ -60,12 +59,27 @@
     text-align : center;
   }
 
-  .playerSection .musicPlayerContainer .explain {
+  .playerSection .musicPlayerContainer {
     margin : 1rem;
   }
 
+  .explain {
+    white-space: pre-line;
+    line-height: 160%;
+    font-weight : 300;
+    font-size : .875rem;
+
+    margin : 1rem 2rem;
+  }
+
+  .explain-title {
+    margin : 0 2rem;
+    font-size : 1.25rem;
+    font-weight : 600;
+  }
+
   .playerline {
-    width : 100%;
+    // width : 100%;
   }
 
   @media (max-width: 768px) {
