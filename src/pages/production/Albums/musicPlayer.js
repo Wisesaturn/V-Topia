@@ -6,51 +6,51 @@ class MusicPlayer {
 
     this.render = () => {
       this.$container.innerHTML = this.contentHTML();
+      console.log(this.contentHTML());
     };
 
     this.contentHTML = () => {
-      return `
-        <div class="musicPlayerWrapper" id="1">
-          <div class="musicPlayerContainer" id="1">
-            <div class="thumbnail">thumbnail</div>
-            <div class="explain">explain</div>
+      const musicsData = [
+        {
+          thumbnailUrl: 'https://cdn.v-topia.co.kr/V-Topia/Music/Thumbnail_You.png',
+          MusicUrl: 'https://cdn.v-topia.co.kr/V-Topia/Music/You.mp3',
+          explain: 'You',
+        },
+        {
+          thumbnailUrl: '',
+          MusicUrl: '',
+          explain: 'empty',
+        },
+        {
+          thumbnailUrl: '',
+          MusicUrl: '',
+          explain: 'empty',
+        },
+        {
+          thumbnailUrl: '',
+          MusicUrl: '',
+          explain: 'empty',
+        },
+      ];
+
+      const musics = musicsData.map((music, idx) => {
+        return `
+         <div class="musicPlayerWrapper" id=${idx}>
+          <div class="musicPlayerContainer" id=${idx}>
+            <div class="thumbnail">
+              <img src=${music.thumbnailUrl} alt="Thumbnail_You" ></img>
+            </div>
+            <div class="explain">${music.explain}</div>
           </div>
-          <div class="playerline material-icons">
-            <span class="isButton">play_arrow</span>
-            <div class="playerlineGauge"></div>  
-          </div>
+          <audio class="playerline" id="audio-player" controls>
+            <source src=${music.MusicUrl} type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
         </div>
-         <div class="musicPlayerWrapper" id="2">
-          <div class="musicPlayerContainer" id="2">
-            <div class="thumbnail">thumbnail</div>
-            <div class="explain">explain</div>
-          </div>
-          <div class="playerline material-icons">
-            <span class="isButton">play_arrow</span>
-            <div class="playerlineGauge"></div>  
-          </div>
-        </div>
-         <div class="musicPlayerWrapper" id="3">
-          <div class="musicPlayerContainer" id="3">
-            <div class="thumbnail">thumbnail</div>
-            <div class="explain">explain</div>
-          </div>
-          <div class="playerline material-icons">
-            <span class="isButton">play_arrow</span>
-            <div class="playerlineGauge"></div>  
-          </div>
-        </div>
-         <div class="musicPlayerWrapper" id="4">
-          <div class="musicPlayerContainer" id="4">
-            <div class="thumbnail">thumbnail</div>
-            <div class="explain">explain</div>
-          </div>
-          <div class="playerline material-icons">
-            <span class="isButton">play_arrow</span>
-            <div class="playerlineGauge"></div>  
-          </div>
-        </div>
-      `;
+        `;
+      });
+
+      return musics.join('');
     };
 
     this.render();
