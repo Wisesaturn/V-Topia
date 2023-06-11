@@ -51,7 +51,7 @@ class VivianPage {
                   <div class="inner2">
                     <div class="music">
                       <span class="material-symbols-outlined">
-                          music_note
+                           
                       </span>
                       <p>2023.05.30</p>
                       <div class="line"></div>
@@ -59,25 +59,12 @@ class VivianPage {
                       <img src="/artist_album_ex.png" alt="image">
                       <p>MORE</p>
                     </div> 
-                    <div class="music">
-                        <span class="material-symbols-outlined">
-                            music_note
-                        </span>
-                        <p>2023.05.30</p>
-                        <div class="line"></div>
-                        <p>TITLE</p>
-                        <img src="/artist_album_ex.png" alt="image">
-                        <p>MORE</p>
+                    
+                    <div class="inner2">
+                    <p>SUNRISE</p>
+                    <div style="text-align: center; margin-top: 40px;">
+                    <iframe width="1200" height="620" src="https://www.youtube.com/embed/fgMQsp0Svsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
-                    <div class="music">
-                        <span class="material-symbols-outlined">
-                            music_note
-                        </span>
-                        <p>2023.05.30</p>
-                        <div class="line"></div>
-                        <p>TITLE</p>
-                        <img src="/artist_album_ex.png" alt="image">
-                        <p>MORE</p>
                     </div>
                   </div>
                 </section>
