@@ -20,7 +20,7 @@ class VideoSection {
           <h1>PLAY ON CLICK</h1>
         </div>
         <div class="videoSource">
-          <video playsinline="" muted="" loop="" autoplay preload="metadata" data-desktop-url="https://cdn.v-topia.co.kr/V-Topia/Video/V-Topia-Trailer.mp4">
+          <video playsinline="" muted="" loop="" id="trailer" autoplay preload="metadata" data-desktop-url="https://cdn.v-topia.co.kr/V-Topia/Video/V-Topia-Trailer.mp4">
             <source src="https://cdn.v-topia.co.kr/V-Topia/Video/V-Topia-Trailer.mp4" type="video/mp4">
           </video>
         </div>

@@ -2,6 +2,7 @@ import { $ } from '@utils/useQuerySelector';
 
 import VideoSection from './videoSection';
 import ArtistSection from './artistSection';
+import SourceSection from './sourceSection';
 import ArchiveSection from './archiveSection';
 import './style.scss';
 
@@ -21,6 +22,7 @@ class MainPage {
       new VideoSection($('.videoSection'));
       new ArtistSection($('.artistSection'));
       new ArchiveSection($('.archiveSection'));
+      new SourceSection($('.SourceSection'));
 
       document.body.style.setProperty('overflow-y', 'hidden');
       this.useAlbumFlip();
@@ -44,11 +46,7 @@ class MainPage {
               </section>
             </swiper-slide>
             <swiper-slide>
-              <section class="JooASection">
-                <h1>JooA</h1>
-                <div class="video">
-                  video
-                </div>
+              <section class="SourceSection">
               </section>
             </swiper-slide>
           </swiper-container>
@@ -79,6 +77,7 @@ class MainPage {
       const playBtn = $('.playbtn');
       const titleUp = $('.titleUp');
       const titleDown = $('.titleDown');
+      const trailer = $('#trailer');
       if (!($('.videoSection') instanceof HTMLElement)) return;
 
       const videoPlayEvent = () => {
@@ -91,6 +90,7 @@ class MainPage {
 
         videoPlay.classList.add('clicked');
         playBtn.classList.add('clicked');
+        trailer.muted = false;
         videoPlay.removeEventListener('click', videoPlayEvent);
       };
 
